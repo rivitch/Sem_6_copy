@@ -7,12 +7,12 @@
 a1 = "" # первый элемент
 n = "" # кол-во элементов
 d = "" # разность
-a1 = input("Введите первый элемент, a1 = ")
-n = input("Введите кол-во элементов, n = ")
-d = input("Введите разность, d = ")
+a1 = int(input("Введите первый элемент, a1 = "))
+n = int(input("Введите кол-во элементов, n = "))
+d = int(input("Введите разность, d = "))
 list_1 = list()
-for i in range (int(n)) :
-    a = int(a1) + ((i+1)-1) * int(d)
+for i in range (n) :
+    a = a1 + i * d
     #print(a)
     list_1.append(a)
-print(*list_1)
+print("Элементы массива - ",*list_1)
