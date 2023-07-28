@@ -6,11 +6,16 @@
 min = ""
 max = ""
 list_1 = list()
-a = 20
+res = list()
 from random import randint
-# min = input("Введите минимум диапазона, min = ")
-# max = input("Введите максимум диапазона, max = ")
+a = int(input("Введите количество элементов массива, a = "))
+min = int(input("Введите минимум диапазона, min = "))
+max = int(input("Введите максимум диапазона, max = "))
 for i in range(a):
     b = randint(0,20)
     list_1.append(b)
-print(*list_1)
+print("Элементы массива -",*list_1) # вывод массива
+for i in range(len(list_1)):
+    if list_1[i] >= min and list_1[i] <= max:        
+        res.append(i)
+print("индексы элементов массива (списка) - ",*res)
